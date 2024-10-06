@@ -1,0 +1,6 @@
+/* Example for adding space to the bottom of a specific component */
+:host {
+    display: block;
+    margin-bottom: 50px; /* Adjust for different spacing */
+  }
+  
