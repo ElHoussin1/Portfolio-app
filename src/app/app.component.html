@@ -32,230 +32,18 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
-<header id="home" class="hero-section d-flex align-items-center vh-100" data-aos="fade-up">
-  <div class="container text-center">
-    <div class="row align-items-center">
-      <div class="col-md-6 text-md-right text-center mb-4 mb-md-0">
-        <img src="assets/El_Hou.jpg" alt="El Houssin" class="img-fluid rounded-circle profile-photo" data-aos="zoom-in">
-      </div>
-      <div class="col-md-6 text-md-left text-center">
-        <h1 class="display-4 mb-4" data-aos="fade-left"> <span class="highlight">El Houssin BOUBIA</span></h1>
-        <p class="lead mb-4" data-aos="fade-right">Développeur Full stack, Testeur et Psychologue </p>
-      </div>
-    </div>
-  </div>
-</header>
+<app-home></app-home>
 
+<app-about></app-about>
 
-<!-- About Section -->
-<section id="about" class="py-5" data-aos="fade-up">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8 text-center" data-aos="fade-up">
-        <h2 class="mb-4 about-title">Présentation :</h2>
-        <div class="about-content">
-          <p>Hello, je suis <strong>El Houssin BOUBIA</strong>, Je suis en dernière année de master expert en ingénierie logicielle, une formation que je suis en alternance. Cette approche me permet de combiner une solide base théorique avec une expérience pratique précieuse.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-skills></app-skills>
 
-<!-- Skills Section -->
-<section id="skills" class="py-5 bg-light" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center mb-4">Mes compétences :</h2>
-    <div class="row">
-      <!-- JavaScript Skill -->
-      <div class="col-md-6" data-aos="fade-right">
-        <h4>JavaScript</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-        </div>
-      </div>
-      <!-- Angular Skill -->
-      <div class="col-md-6" data-aos="fade-left">
-        <h4>Angular</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-        </div>
-      </div>
+<app-projects></app-projects>
 
-      <!-- Angular Skill -->
-      <div class="col-md-6" data-aos="fade-left">
-        <h4>Grafana</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-        </div>
-      </div>
-
-      <!-- Selenium Skill -->
-      <div class="col-md-6" data-aos="fade-right">
-        <h4>Selenium</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-        </div>
-      </div>
-
-      <!-- Jenkins Skill -->
-      <div class="col-md-6" data-aos="fade-left">
-        <h4>Jenkins</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-        </div>
-      </div>
-
-      <!-- Python Skill -->
-      <div class="col-md-6" data-aos="fade-right">
-        <h4>Python</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-        </div>
-      </div>
-
-      <!-- Java Skill -->
-      <div class="col-md-6" data-aos="fade-left">
-        <h4>Java</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-        </div>
-      </div>
-
-      <!-- Appium Skill -->
-      <div class="col-md-6" data-aos="fade-right">
-        <h4>Appium</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-        </div>
-      </div>
-
-      <!-- Ansible Skill -->
-      <div class="col-md-6" data-aos="fade-left">
-        <h4>Ansible</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-        </div>
-      </div>
-
-      <!-- Docker Skill -->
-      <div class="col-md-6" data-aos="fade-right">
-        <h4>Docker</h4>
-        <div class="progress mb-3">
-          <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-contact></app-contact>
 
 
 
-<!-- Projects Section -->
-<section id="projects" class="py-5" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center mb-4" data-aos="fade-up">Mes projets</h2>
-
-    <!-- Project One -->
-    <div class="row justify-content-center mb-4" data-aos="flip-left">
-      <div class="col-md-6">
-        <div class="card project-card">
-          <!-- Clickable Image for Project One   -->
-          <img src="assets/Grafana.png" class="card-img-top" alt="Dashboard Grafana" data-toggle="modal" data-target="#projectOneModal" style="cursor: pointer;">
-          <div class="card-body text-center">
-            <h5 class="card-title">Grafana</h5>
-            <p class="card-text">Grafana</p>
-            <a href="https://github.com/your-repo/project1" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project Two -->
-    <div class="row justify-content-center mb-4" data-aos="flip-right">
-      <div class="col-md-6">
-        <div class="card project-card">
-          <!-- Clickable Image for Project Two -->
-          <img src="assets/Medhead.png" class="card-img-top" alt="Medhead Poc" data-toggle="modal" data-target="#projectTwoModal" style="cursor: pointer;">
-          <div class="card-body text-center">
-            <h5 class="card-title">Medhead</h5>
-            <p class="card-text">Medhead</p>
-            <a href="https://github.com/your-repo/project2" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Project One Modal -->
-<div class="modal fade" id="projectOneModal" tabindex="-1" aria-labelledby="projectOneModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectOneModalLabel">Dashboard Grafana</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Detailed description of Project One. This project involves building a dashboard with Angular and integrating it with Grafana for data visualization.</p>
-        <p>Here, you can write more information about the features, technologies used, or any other relevant details.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="https://github.com/your-repo/project1" class="btn btn-primary">View Project on GitHub</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Project Two Modal -->
-<div class="modal fade" id="projectTwoModal" tabindex="-1" aria-labelledby="projectTwoModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectTwoModalLabel">Medhead Poc</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Detailed description of Project Two. This project involves building a healthcare app using React and Firebase.</p>
-        <p>Include additional details here like the challenges you faced, the outcome of the project, and how it benefits users.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="https://github.com/your-repo/project2" class="btn btn-primary">View Project on GitHub</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="py-5 bg-light" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center mb-4" data-aos="fade-up">Contacte moi fdp pour colab :</h2>
-    <form data-aos="fade-left">
-      <div class="form-group">
-        <label for="name">Votre nom :</label>
-        <input type="text" class="form-control" id="name" required>
-      </div>
-      <div class="form-group" data-aos="fade-right">
-        <label for="email">Votre e-mail</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="form-group" data-aos="fade-up">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" data-aos="zoom-in">Envoyer</button>
-    </form>
-  </div>
-</section>
 
 
 <div class="back-to-top-wrapper" [class.visible]="isBackToTopVisible">
@@ -266,8 +54,20 @@
   </button>
 </div>
 
+
+
+
+<div class="scroll-to-bottom-wrapper" [class.visible]="isScrollToBottomVisible">
+  <button id="scrollToBottomBtn" title="Go to bottom" (click)="scrollToBottom()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </button>
+</div>
+
+
 <!-- Footer Section -->
-<footer class="bg-dark text-white text-center py-4" data-aos="fade-up">
+<footer class="bg-dark text-white text-center py-1" data-aos="fade-up">
   <div class="container">
     <p>&copy; 2024 El Houssin BOUBIA. All rights reserved.</p>
     <div class="social-links" data-aos="zoom-in">
@@ -277,9 +77,10 @@
       <a href="https://www.linkedin.com/in/el-houssin-boubia/" class="text-white mx-2">
         <i class="fab fa-linkedin"></i>
       </a>
-      
     </div>
   </div>
 </footer>
+
+
 
 

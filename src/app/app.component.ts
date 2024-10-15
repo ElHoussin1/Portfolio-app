@@ -1,15 +1,22 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { ContactComponent } from "./components/contact/contact.component";
+import { AboutComponent } from "./components/about/about.component";
+import { HomeComponent } from "./components/home/home.component";
+import { ProjectsComponent } from "./components/projects/projects.component";
+import { SkillsComponent } from "./components/skills/skills.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  imports: [ContactComponent, AboutComponent, HomeComponent, ProjectsComponent, SkillsComponent]
 })
 export class AppComponent implements OnInit {
   title = 'Portfolio';
   isDarkMode = false; // Track if dark mode is on
-  isBackToTopVisible = false; // Track visibility of back to top button
+  isBackToTopVisible = false; // Track visibility of back-to-top button
+  isScrollToBottomVisible = true; // Track visibility of scroll-to-bottom button
 
   ngOnInit() {
     // Check for saved theme in localStorage and apply it
@@ -23,7 +30,15 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isBackToTopVisible = window.pageYOffset > 300;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+
+    // Show the "Back to Top" button after scrolling down 300px
+    this.isBackToTopVisible = scrollTop > 300;
+
+    // Show the "Scroll to Bottom" button unless the user is near the bottom of the page
+    this.isScrollToBottomVisible = windowHeight + scrollTop < documentHeight - 50;
   }
 
   // Toggle between dark and light modes
@@ -57,5 +72,10 @@ export class AppComponent implements OnInit {
   // Scroll to top function
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Scroll to bottom function
+  scrollToBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
 }
