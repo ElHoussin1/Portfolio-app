@@ -2,7 +2,7 @@
 <section id="contact" class="py-5 bg-light" data-aos="fade-up">
   <div class="container">
     <h2 class="text-center mb-4" data-aos="fade-up">Contactez-moi pour colab :</h2>
-    <form data-aos="fade-left">
+    <form id="contactForm" data-aos="fade-left">
       <div class="form-group">
         <label for="name">Votre nom :</label>
         <input type="text" class="form-control" id="name" required>
@@ -15,7 +15,29 @@
         <label for="message">Message</label>
         <textarea class="form-control" id="message" rows="5" required></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" data-aos="zoom-in">Envoyer</button>
+
+      <!-- Checkbox for consent -->
+      <div class="form-group" data-aos="fade-up">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="consent" required>
+          <label class="form-check-label" for="consent">Je donne mon consentement pour être contacté(e) par e-mail.</label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+
+
     </form>
   </div>
 </section>
+
+<script>
+  // Script to handle the consent validation
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    const consentCheckbox = document.getElementById('consent');
+    if (!consentCheckbox.checked) {
+      alert("Vous devez donner votre consentement avant d'envoyer le message.");
+      event.preventDefault(); // Empêche l'envoi du formulaire
+    }
+  });
+</script>
