@@ -1,33 +1,39 @@
 <!-- Projects Section -->
-<section id="projects" class="py-5" data-aos="fade-up">
+<section id="projects" class="py-5 bg-light" data-aos="fade-up">
   <div class="container">
-    <h2 class="text-center mb-4" data-aos="fade-up">Mes projets</h2>
+    <h2 class="text-center mb-5 font-weight-bold" data-aos="fade-up">Mes Projets</h2>
 
     <!-- Project One -->
-    <div class="row justify-content-center mb-4" data-aos="flip-left">
-      <div class="col-md-6">
-        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#projectOneModal" style="cursor: pointer;">
-          <!-- Clickable Image for Project One -->
-          <img src="assets/Grafana.png" class="card-img-top" alt="Dashboard Grafana">
+    <div class="row justify-content-center mb-5" data-aos="zoom-in-up">
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card shadow-sm border-0" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#projectOneModal">
+          <div class="card-img-container position-relative">
+            <img src="assets/Grafana.png" class="card-img-top rounded" alt="Dashboard Grafana">
+            <div class="card-hover-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+              <i class="fas fa-search-plus text-white" style="font-size: 2.5rem;"></i>
+            </div>
+          </div>
           <div class="card-body text-center">
-            <h5 class="card-title">Grafana</h5>
-            <p class="card-text">Grafana</p>
-            
+            <h5 class="card-title font-weight-bold">Grafana</h5>
+            <p class="card-text">Angular & Grafana Dashboard</p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Project Two -->
-    <div class="row justify-content-center mb-4" data-aos="flip-right">
-      <div class="col-md-6">
-        <div class="card project-card" data-bs-toggle="modal" data-bs-target="#projectTwoModal" style="cursor: pointer;">
-          <!-- Clickable Image for Project Two -->
-          <img src="assets/Medhead.png" class="card-img-top" alt="Medhead Poc">
+    <div class="row justify-content-center mb-5" data-aos="zoom-in-up">
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card shadow-sm border-0" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#projectTwoModal">
+          <div class="card-img-container position-relative">
+            <img src="assets/Medhead.png" class="card-img-top rounded" alt="Medhead Poc">
+            <div class="card-hover-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+              <i class="fas fa-search-plus text-white" style="font-size: 2.5rem;"></i>
+            </div>
+          </div>
           <div class="card-body text-center">
-            <h5 class="card-title">Medhead</h5>
-            <p class="card-text">Medhead</p>
-            
+            <h5 class="card-title font-weight-bold">Medhead</h5>
+            <p class="card-text">Healthcare App</p>
           </div>
         </div>
       </div>
@@ -37,19 +43,32 @@
 
 <!-- Project One Modal -->
 <div class="modal fade" id="projectOneModal" tabindex="-1" aria-labelledby="projectOneModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="projectOneModalLabel">Dashboard Grafana</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Detailed description of Project One. This project involves building a dashboard with Angular and integrating it with Grafana for data visualization.</p>
-        <p>Here, you can write more information about the features, technologies used, or any other relevant details.</p>
+        <h5 class="mb-3">Project Description:</h5>
+        <p>This project involves creating a highly interactive and customizable dashboard using Angular and Grafana. The project integrates several data sources and provides real-time data visualization capabilities.</p>
+        <h6 class="mt-4">Technologies Used:</h6>
+        <ul>
+          <li>Angular</li>
+          <li>Grafana</li>
+          <li>REST APIs</li>
+          <li>Data visualization tools</li>
+        </ul>
+        <h6 class="mt-4">Key Features:</h6>
+        <ul>
+          <li>Real-time data fetching and visual representation.</li>
+          <li>Customizable widgets and charts.</li>
+          <li>Easy-to-navigate UI for non-technical users.</li>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a href="https://github.com/your-repo/project1" class="btn btn-primary">View Project on GitHub</a>
+        <a href="https://github.com/your-repo/project1" class="btn btn-primary" target="_blank">View on GitHub</a>
       </div>
     </div>
   </div>
@@ -57,19 +76,32 @@
 
 <!-- Project Two Modal -->
 <div class="modal fade" id="projectTwoModal" tabindex="-1" aria-labelledby="projectTwoModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="projectTwoModalLabel">Medhead Poc</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Detailed description of Project Two. This project involves building a healthcare app using React and Firebase.</p>
-        <p>Include additional details here like the challenges you faced, the outcome of the project, and how it benefits users.</p>
+        <h5 class="mb-3">Project Description:</h5>
+        <p>Medhead is a Proof of Concept (PoC) healthcare app developed using React and Firebase. This project aims to simplify hospital and patient data management by providing real-time updates, appointment scheduling, and access to healthcare resources.</p>
+        <h6 class="mt-4">Technologies Used:</h6>
+        <ul>
+          <li>React</li>
+          <li>Firebase</li>
+          <li>Node.js</li>
+          <li>Firestore Database</li>
+        </ul>
+        <h6 class="mt-4">Key Features:</h6>
+        <ul>
+          <li>Real-time hospital data management.</li>
+          <li>Efficient patient scheduling and tracking.</li>
+          <li>Highly secure and scalable with Firebase backend.</li>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a href="https://github.com/your-repo/project2" class="btn btn-primary">View Project on GitHub</a>
+        <a href="https://github.com/your-repo/project2" class="btn btn-primary" target="_blank">View on GitHub</a>
       </div>
     </div>
   </div>

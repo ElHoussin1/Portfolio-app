@@ -140,30 +140,104 @@ body {
   padding-bottom: 100px;
 }
 
-/* Ensure the images have a fixed height and don't distort */
+/* My Projects Section Styling */
+#projects {
+  padding: 60px 0;
+  background-color: var(--bg-color);
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+/* Project Card Styling */
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image Styling */
 .project-card img {
   height: 250px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
-/* Add some spacing between cards */
+/* Hover Overlay Effect on Image */
+.card-img-container {
+  position: relative;
+}
+
+.card-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .card-hover-overlay {
+  opacity: 1;
+}
+
+.card-hover-overlay i {
+  font-size: 2.5rem;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-hover-overlay i {
+  transform: scale(1.1);
+}
+
+/* Card Body and Text */
 .project-card .card-body {
+  padding: 20px;
   text-align: center;
-}
-
-/* Ensure all cards respect dark mode */
-body.dark-mode .card {
   background-color: var(--bg-color);
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
 }
 
 .project-card h5 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 .project-card p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* Modal Content Styling */
+.modal-content {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-color);
 }
 
 /* About Section Styles */
@@ -264,9 +338,6 @@ body.dark-mode .card {
 body.dark-mode .navbar .navbar-brand {
   color: var(--text-color) !important; /* Forcer la couleur du texte en blanc */
 }
-
-
-
 
 /* Dark mode specific styles */
 body.dark-mode #backToTopBtn {
