@@ -5,33 +5,61 @@ body.dark-mode {
   --primary-color: #bb86fc;
   --secondary-color: #03dac6;
   --border-color: #333333;
+  --skill-bg-color: #1e1e1e; /* Background for skill cards in dark mode */
+  --progress-bar-bg: #444444; /* Dark background for progress bars */
+  --progress-bar-gradient: linear-gradient(to right, #4caf50, #81c784); /* Greenish gradient for dark mode */
 }
 
-/* Applying the theme variables */
-body, div, section, header, footer, article, aside, nav, main {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+/* Ensure all elements inherit dark mode background */
+body.dark-mode * {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Skill cards in dark mode */
+body.dark-mode .skill-card {
+  background-color: var(--skill-bg-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  border: 2px solid #ffffff;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .skill-card h4 i {
+  color: var(--primary-color);
+}
+
+body.dark-mode .skill-card h4 {
+  color: var(--primary-color);
+}
+
+/* Dark mode progress bar */
+body.dark-mode .progress {
+  background-color: var(--progress-bar-bg);
+}
+
+body.dark-mode .progress-bar {
+  background-image: var(--progress-bar-gradient);
+}
+
+/* Global transition for color and background */
+* {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navbar in dark mode */
-body.dark-mode .navbar {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-body.dark-mode .navbar .nav-link {
-  color: var(--text-color);
-}
-
-body.dark-mode .navbar .nav-link:hover {
+body.dark-mode .navbar .nav-link:hover,
+body.dark-mode .navbar .navbar-brand {
   color: var(--primary-color);
-}
-
-/* Ensure all sections have dark background in dark mode */
-section {
-  background-color: var(--bg-color);
-  color: var(--text-color);
 }
 
 /* Button primary styles */
@@ -39,11 +67,10 @@ section {
   background-color: var(--primary-color);
   color: rgb(0, 0, 0); /* Ensure the text is visible */
   border-color: var(--primary-color);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* A darker shade for hover effect */
+  background-color: #0056b3;
   border-color: #0056b3;
 }
 
@@ -51,7 +78,6 @@ section {
 .btn-secondary {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Dark Mode Toggle Button Style */
@@ -66,8 +92,11 @@ section {
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode section,
+body.dark-mode .container {
+  text-align: center;
 }
 
 .btn-dark-mode-toggle:hover {
@@ -121,171 +150,7 @@ section {
   transform: translateY(-2px);
 }
 
-/* Footer Section */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  z-index: 1001;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
 
-/* Body padding to account for the fixed footer */
-body {
-  padding-bottom: 100px;
-}
-
-/* My Projects Section Styling */
-#projects {
-  padding: 60px 0;
-  background-color: var(--bg-color);
-}
-
-#projects h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 40px;
-}
-
-/* Project Card Styling */
-.project-card {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-  border-radius: 10px;
-  overflow: hidden;
-  border: none;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Card Image Styling */
-.project-card img {
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Hover Overlay Effect on Image */
-.card-img-container {
-  position: relative;
-}
-
-.card-hover-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .card-hover-overlay {
-  opacity: 1;
-}
-
-.card-hover-overlay i {
-  font-size: 2.5rem;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .card-hover-overlay i {
-  transform: scale(1.1);
-}
-
-/* Card Body and Text */
-.project-card .card-body {
-  padding: 20px;
-  text-align: center;
-  background-color: var(--bg-color);
-}
-
-.project-card h5 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text-color);
-}
-
-.project-card p {
-  font-size: 1.1rem;
-  color: var(--text-color);
-}
-
-/* Modal Content Styling */
-.modal-content {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.modal-header {
-  border-bottom: 1px solid var(--border-color);
-}
-
-.modal-footer {
-  border-top: 1px solid var(--border-color);
-}
-
-/* About Section Styles */
-#about {
-  background-color: var(--bg-color);
-  padding: 60px 0;
-}
-
-.about-title {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  margin-bottom: 30px;
-  position: relative;
-  display: inline-block;
-}
-
-.about-title::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: var(--primary-color);
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.about-content {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-color);
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.05); /* Slight transparency */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.about-content p {
-  margin-bottom: 0;
-}
-
-.about-content strong {
-  color: var(--primary-color);
-  font-weight: 600;
-}
 
 /* Back to Top Button Styles */
 .back-to-top-wrapper {
@@ -334,17 +199,31 @@ body {
   transform: translateY(-2px);
 }
 
-/* Forcer la couleur du texte "Mon Portfolio" en mode sombre */
-body.dark-mode .navbar .navbar-brand {
-  color: var(--text-color) !important; /* Forcer la couleur du texte en blanc */
+/* Footer Section */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  z-index: 1001;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark mode specific styles */
-body.dark-mode #backToTopBtn {
-  background-color: var(--secondary-color);
-  color: var(--bg-color);
+/* Body padding to account for the fixed footer */
+body {
+  padding-bottom: 100px;
 }
 
-body.dark-mode #backToTopBtn:hover {
-  background-color: var(--primary-color);
+/* Dark mode skill card text and icons */
+body.dark-mode .skill-card h4, 
+body.dark-mode .skill-card h4 i {
+  color: var(--primary-color);
+}
+
+body.dark-mode .skill-card .progress-bar {
+  background-image: var(--progress-bar-gradient);
 }
